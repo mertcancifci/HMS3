@@ -32,11 +32,6 @@ namespace HMS3
             }
         }
 
-        /*void Yenile()
-        {
-            dgv_Doktor.DataSource = DbYonetimi.List("select hastaAd, hastaNo, hastaCinsiyet,hastaAdres,hastaAmeliyat from doktorKayit, kullaniciKayit where kullaniciKayit.kullaniciId=doktorKayit.doktorAd and kullaniciId='"+Giris.kullaniciID+"'");
-            
-        }*/
         void Temizle()
         {
             foreach (Control items in this.PnlDoktor.Controls)
@@ -108,16 +103,15 @@ namespace HMS3
                 cmd.ExecuteNonQuery();
 
             }
-            //Yenile();
             doktor_Load(null, null);
             Temizle();
             MessageBox.Show("kayıt eklenmiştir!");
-            //return;
+
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            //List<HastaBilgileri> hastaList = new List<HastaBilgileri>();
+
 
             string sql = "update doktorKayit set hastaAd=@hastaAd , hastaNo=@hastaNo,hastaCinsiyet=@hastaCinsiyet,hastaAdres=@hastaAdres,hastaAmeliyat=@hastaAmeliyat,doktorAd=@doktorAd where hastaId=@hastaId" ;
             using (SqlCommand cmd = new SqlCommand(sql, DbYonetimi.BaglantiTestEt()))
@@ -138,7 +132,6 @@ namespace HMS3
 
 
             //diğer yöntem doktor_Load(null, null);
-            //Yenile();
             Temizle();
             MessageBox.Show("Kayıt başarılı bir şekilde güncellenmiştir");
         }

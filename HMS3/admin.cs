@@ -19,10 +19,7 @@ namespace HMS3
         {
             InitializeComponent();
         }
-        /*void Yenile()
-        {
-            dgv_Admin.DataSource = Crud.List("Select * from kullaniciKayit");
-        }*/
+
         void Temizle()
         {
             foreach (Control items in this.PnlAdmin.Controls)
@@ -161,7 +158,7 @@ namespace HMS3
 
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
-            //dgv_Admin.DataSource = Crud.List("Select * from kullaniciKayit where kullaniciTipi like '%" + txtAra.Text + "%' or kullaniciAdi like '%" + txtAra.Text + "%'");
+
             string sql = "Select * from kullaniciKayit where kullaniciTipi like '%" + txtAra.Text + "%' or kullaniciAdi like '%" + txtAra.Text + "%'";
             DataTable tbl = new DataTable();
             using (SqlDataAdapter adtr = new SqlDataAdapter(sql, DbYonetimi.BaglantiTestEt()))

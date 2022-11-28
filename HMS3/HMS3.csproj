@@ -86,7 +86,6 @@
     <Compile Include="Classes\DbYonetimi.cs" />
     <Compile Include="Classes\HastaBilgileri.cs" />
     <Compile Include="Classes\KullaniciBilgileri.cs" />
-    <Compile Include="Crud.cs" />
     <Compile Include="doktor.cs">
       <SubType>Form</SubType>
     </Compile>

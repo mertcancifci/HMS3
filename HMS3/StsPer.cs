@@ -131,15 +131,8 @@ namespace HMS3
                     cmd.ExecuteNonQuery();
 
                 }
-                //dgv_StsPer.DataSource = null;
-                //dgv_StsPer.DataBindings.Clear();
-                //dgv_StsPer.DataSource = HastalariGetir();
-                //dgvStsPerMain.DataSource = null;
-                //dgvStsPerMain.DataSource = HastalariGoster();
-
                 StsPer_Load(null,null);
-                //diğer yöntem doktor_Load(null, null);
-            
+
                 Temizle();
                 HastalariGetir();
                 MessageBox.Show("Kayıt başarılı bir şekilde eklenmiştir");
@@ -167,15 +160,11 @@ namespace HMS3
                 cmd.ExecuteNonQuery();
 
             }
-            //dgv_StsPer.DataSource = null;
-            //dgv_StsPer.DataBindings.Clear();
-            //dgv_StsPer.DataSource = HastalariGetir();
             dgvStsPerMain.DataSource = null;
             dgvStsPerMain.DataSource = HastalariGoster();
 
 
-            //diğer yöntem doktor_Load(null, null);
-            //Yenile();
+
             Temizle();
             MessageBox.Show("Kayıt başarılı bir şekilde güncellenmiştir");
         }
